@@ -13,7 +13,7 @@ namespace EscolaAPI.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.2");
+                .HasAnnotation("ProductVersion", "3.1.10");
 
             modelBuilder.Entity("EscolaAPI.Models.Aluno", b =>
                 {
@@ -98,13 +98,6 @@ namespace EscolaAPI.Migrations
                         .HasForeignKey("ProfessorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Professor");
-                });
-
-            modelBuilder.Entity("EscolaAPI.Models.Professor", b =>
-                {
-                    b.Navigation("Alunos");
                 });
 #pragma warning restore 612, 618
         }

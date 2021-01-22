@@ -8,14 +8,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EscolaAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210121012855_InitialCreate")]
+    [Migration("20210121123003_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.2");
+                .HasAnnotation("ProductVersion", "3.1.10");
 
             modelBuilder.Entity("EscolaAPI.Models.Aluno", b =>
                 {
@@ -100,13 +100,6 @@ namespace EscolaAPI.Migrations
                         .HasForeignKey("ProfessorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Professor");
-                });
-
-            modelBuilder.Entity("EscolaAPI.Models.Professor", b =>
-                {
-                    b.Navigation("Alunos");
                 });
 #pragma warning restore 612, 618
         }

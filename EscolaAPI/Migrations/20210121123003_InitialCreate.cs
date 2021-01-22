@@ -10,9 +10,9 @@ namespace EscolaAPI.Migrations
                 name: "Professores",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Nome = table.Column<string>(type: "TEXT", nullable: true)
+                    Nome = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -23,11 +23,11 @@ namespace EscolaAPI.Migrations
                 name: "Alunos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Nome = table.Column<string>(type: "TEXT", nullable: true),
-                    Nascimento = table.Column<string>(type: "TEXT", nullable: true),
-                    ProfessorId = table.Column<int>(type: "INTEGER", nullable: false)
+                    Nome = table.Column<string>(nullable: true),
+                    Nascimento = table.Column<string>(nullable: true),
+                    ProfessorId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
